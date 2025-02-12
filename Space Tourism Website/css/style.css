@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Content of website */
+
+.content {
+    width: 100%;
+    height: 1028px;
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    box-sizing: border-box !important;
+}
+
+/* navbar starts here */
+
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left>hr {
+    border: 0.5px solid #979797;
+    opacity: 0.5;
+    width: 85%;
+    left: 3rem;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    font-family: "Barlow Condensed", sans-serif;
+    color: white;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    padding-left: 8rem;
+    height: 80px;
+    backdrop-filter: blur(18px);
+    gap: 5rem;
+}
+
+.right>div:nth-child(1) {
+    border-bottom: 2px solid white;
+}
+
+.right>div {
+    gap: 8px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 3px;
+    
+    &:hover {
+        border-bottom: 2px solid #979797;
+    }
+}
+
+@media screen and (min-width:450px) and (max-width:950px) {
+    nav {
+        gap: 0px;
+    }
+
+    .left {
+        width: fit-content !important;
+        padding-left: 1rem !important;
+    }
+    
+    .left>hr {
+        display: none;
+    }
+    
+    .right {
+        width: auto !important;
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+    
+    .content {
+        background-image: url(../assets/home/background-home-tablet.jpg);
+    }
+}
+
+.ham{
+    display: none;
+    position: relative;
+    left: 0;
+}
+
+@media screen and (max-width:625px){
+    
+    .left{
+        width: 25% !important;
+        justify-content: left;
+    }
+    
+    .right{
+        width: 75% !important;
+        flex-direction: column;
+        align-items: flex-start !important;
+        backdrop-filter: blur(18px) !important;
+    }
+
+    .right>div:nth-child(1) {
+        border-right: 2px solid white;
+    }
+    
+    .right > div{
+        width: 100% !important;
+        border-bottom: none !important;
+        
+        &:hover {
+            border-right: 2px solid #979797;
+        }
+    }
+    
+    .left>hr {
+        display: none;
+    }
+    
+    .content {
+        background-image: url(../assets/home/background-home-mobile.jpg);
+    }
+}
+
+
